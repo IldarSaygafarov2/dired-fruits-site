@@ -1,6 +1,749 @@
 {% extends 'base.html' %}
+{% load main_tags static %}
 
 
 {% block title %}
 Главная страница
+{% endblock %}
+
+
+{% block content %}
+<section id="banner" style="background: #FAF4EF;">
+    <div class="container">
+        <div class="swiper main-swiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1: Mixed dried fruits -->
+                <div class="swiper-slide py-5">
+                    <div class="row banner-content align-items-center">
+                        <div class="img-wrapper col-md-5">
+                        </div>
+                        <div class="content-wrapper col-md-7 p-5 mb-5">
+                            <div class="secondary-font text-primary text-uppercase mb-4">Natural & Healthy</div>
+                            <h2 class="banner-title display-1 fw-normal">Delicious <span class="text-primary">Mixed
+                                    Dried Fruits</span></h2>
+                            <p class="mb-4 fs-5 text-muted">A perfect blend of dried apricots, figs, and raisins for
+                                your healthy snacking.</p>
+                            <a href="shop.html" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                Shop Now
+                                <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Close-up dried apricots -->
+                <div class="swiper-slide py-5">
+                    <div class="row banner-content align-items-center">
+                        <div class="img-wrapper col-md-5">
+                        </div>
+                        <div class="content-wrapper col-md-7 p-5 mb-5">
+                            <div class="secondary-font text-primary text-uppercase mb-4">Sweet & Tasty</div>
+                            <h2 class="banner-title display-1 fw-normal">Premium <span class="text-primary">Dried
+                                    Apricots</span></h2>
+                            <p class="mb-4 fs-5 text-muted">Naturally dried, full of flavor and packed with nutrients.
+                            </p>
+                            <a href="shop.html" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                Buy Now
+                                <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Dried figs and nuts -->
+                <div class="swiper-slide py-5">
+                    <div class="row banner-content align-items-center">
+                        <div class="img-wrapper col-md-5">
+                        </div>
+                        <div class="content-wrapper col-md-7 p-5 mb-5">
+                            <div class="secondary-font text-primary text-uppercase mb-4">Nutritious Mix</div>
+                            <h2 class="banner-title display-1 fw-normal">Organic <span class="text-primary">Dried Figs &
+                                    Nuts</span></h2>
+                            <p class="mb-4 fs-5 text-muted">Handpicked figs combined with premium nuts for the ultimate
+                                snack.</p>
+                            <a href="shop.html" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                Order Today
+                                <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination mb-5"></div>
+        </div>
+    </div>
+</section>
+
+{% include './components/index/_categories-section.html' %}
+
+<section id="dried-fruits" class="my-5 overflow-hidden">
+    <div class="container pb-5">
+
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Dried Fruits</h2>
+            <div>
+                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                    shop now
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="products-carousel swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="z-1 position-absolute rounded-3 m-3 px-3 border border-dark-subtle">
+                        New
+                    </div>
+                    <div class="card position-relative">
+                        <a href="single-product.html"><img src="{% static 'assets/images/dried1.jpg' %}"
+                                class="img-fluid rounded-4" alt="Dried Mango"></a>
+                        <div class="card-body p-0">
+                            <a href="single-product.html">
+                                <h3 class="card-title pt-4 m-0">Premium Dried Mango</h3>
+                            </a>
+                            <div class="card-text">
+                                <span class="rating secondary-font">
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    5.0</span>
+                                <h3 class="secondary-font text-primary">$12.99</h3>
+                                <div class="d-flex flex-wrap mt-3">
+                                    <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                        <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                    </a>
+                                    <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="z-1 position-absolute rounded-3 m-3 px-3 border border-dark-subtle">
+                        -15%
+                    </div>
+                    <div class="card position-relative">
+                        <a href="single-product.html"><img src="images/dried2.jpg" class="img-fluid rounded-4"
+                                alt="Mixed Nuts"></a>
+                        <div class="card-body p-0">
+                            <a href="single-product.html">
+                                <h3 class="card-title pt-4 m-0">Nut & Fruit Mix</h3>
+                            </a>
+                            <div class="card-text">
+                                <span class="rating secondary-font">
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    4.8</span>
+                                <h3 class="secondary-font text-primary">$10.20</h3>
+                                <div class="d-flex flex-wrap mt-3">
+                                    <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                        <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                    </a>
+                                    <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card position-relative">
+                        <a href="single-product.html"><img src="images/dried3.jpg" class="img-fluid rounded-4"
+                                alt="Dried Figs"></a>
+                        <div class="card-body p-0">
+                            <a href="single-product.html">
+                                <h3 class="card-title pt-4 m-0">Organic Dried Figs</h3>
+                            </a>
+                            <div class="card-text">
+                                <span class="rating secondary-font">
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    5.0</span>
+                                <h3 class="secondary-font text-primary">$8.50</h3>
+                                <div class="d-flex flex-wrap mt-3">
+                                    <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                        <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                    </a>
+                                    <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="z-1 position-absolute rounded-3 m-3 px-3 border border-dark-subtle">
+                        Limited
+                    </div>
+                    <div class="card position-relative">
+                        <a href="single-product.html"><img src="images/dried4.jpg" class="img-fluid rounded-4"
+                                alt="Dried Pineapple"></a>
+                        <div class="card-body p-0">
+                            <a href="single-product.html">
+                                <h3 class="card-title pt-4 m-0">Dried Pineapple Rings</h3>
+                            </a>
+                            <div class="card-text">
+                                <span class="rating secondary-font">
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    4.9</span>
+                                <h3 class="secondary-font text-primary">$11.75</h3>
+                                <div class="d-flex flex-wrap mt-3">
+                                    <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                        <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                    </a>
+                                    <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- / products-carousel -->
+
+    </div>
+</section>
+
+<section id="dried-fruits" class="my-5">
+    <div class="container my-5 py-5">
+
+        <div class="section-header d-md-flex justify-content-between align-items-center">
+            <h2 class="display-3 fw-normal">Dried Fruits</h2>
+            <div class="mb-4 mb-md-0">
+                <p class="m-0">
+                    <button class="filter-button me-4 active" data-filter="*">ALL</button>
+                    <button class="filter-button me-4" data-filter=".berries">BERRIES</button>
+                    <button class="filter-button me-4" data-filter=".tropical">TROPICAL</button>
+                    <button class="filter-button me-4" data-filter=".nuts">NUTS</button>
+                </p>
+            </div>
+            <div>
+                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                    shop now
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="isotope-container row">
+
+            <div class="item berries col-md-4 col-lg-3 my-4">
+                <div class="card position-relative">
+                    <a href="single-product.html"><img src="images/dried-cranberries.jpg" class="img-fluid rounded-4"
+                            alt="Dried Cranberries"></a>
+                    <div class="card-body p-0">
+                        <a href="single-product.html">
+                            <h3 class="card-title pt-4 m-0">Dried Cranberries</h3>
+                        </a>
+                        <div class="card-text">
+                            <span class="rating secondary-font">
+                                ★★★★★ 4.9
+                            </span>
+                            <h3 class="secondary-font text-primary">$7.99 / 250g</h3>
+                            <div class="d-flex flex-wrap mt-3">
+                                <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                    <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                </a>
+                                <a href="#" class="btn-wishlist px-4 pt-3">
+                                    <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item tropical col-md-4 col-lg-3 my-4">
+                <div class="card position-relative">
+                    <a href="single-product.html"><img src="images/dried-mango.jpg" class="img-fluid rounded-4"
+                            alt="Dried Mango"></a>
+                    <div class="card-body p-0">
+                        <a href="single-product.html">
+                            <h3 class="card-title pt-4 m-0">Dried Mango</h3>
+                        </a>
+                        <div class="card-text">
+                            <span class="rating secondary-font">
+                                ★★★★★ 5.0
+                            </span>
+                            <h3 class="secondary-font text-primary">$9.50 / 250g</h3>
+                            <div class="d-flex flex-wrap mt-3">
+                                <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                    <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                </a>
+                                <a href="#" class="btn-wishlist px-4 pt-3">
+                                    <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item tropical col-md-4 col-lg-3 my-4">
+                <div class="card position-relative">
+                    <a href="single-product.html"><img src="images/dried-dates.jpg" class="img-fluid rounded-4"
+                            alt="Medjool Dates"></a>
+                    <div class="card-body p-0">
+                        <a href="single-product.html">
+                            <h3 class="card-title pt-4 m-0">Medjool Dates</h3>
+                        </a>
+                        <div class="card-text">
+                            <span class="rating secondary-font">
+                                ★★★★★ 4.8
+                            </span>
+                            <h3 class="secondary-font text-primary">$8.75 / 250g</h3>
+                            <div class="d-flex flex-wrap mt-3">
+                                <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                    <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                </a>
+                                <a href="#" class="btn-wishlist px-4 pt-3">
+                                    <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item nuts col-md-4 col-lg-3 my-4">
+                <div class="card position-relative">
+                    <a href="single-product.html"><img src="images/almonds.jpg" class="img-fluid rounded-4"
+                            alt="Roasted Almonds"></a>
+                    <div class="card-body p-0">
+                        <a href="single-product.html">
+                            <h3 class="card-title pt-4 m-0">Roasted Almonds</h3>
+                        </a>
+                        <div class="card-text">
+                            <span class="rating secondary-font">
+                                ★★★★★ 5.0
+                            </span>
+                            <h3 class="secondary-font text-primary">$10.00 / 250g</h3>
+                            <div class="d-flex flex-wrap mt-3">
+                                <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                    <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                </a>
+                                <a href="#" class="btn-wishlist px-4 pt-3">
+                                    <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="banner-2" class="my-3" style="background: #F9F3EC;">
+    <div class="container">
+        <div class="row banner-content align-items-center">
+            <div class="content-wrapper col-12 col-md-12 p-5 text-center text-md-start">
+                <div class="secondary-font text-primary text-uppercase mb-3 fs-4">Up to 40% Off</div>
+                <h2 class="banner-title display-1 fw-normal">Natural Dried Fruits Sale!</h2>
+                <p class="lead my-3">Discover premium dried apricots, figs, dates, and more — all at discounted prices.
+                </p>
+                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                    Shop Now
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonial">
+    <div class="container my-5 py-5">
+        <div class="row">
+            <div class="offset-md-1 col-md-10">
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-2">
+                                    <iconify-icon icon="ri:double-quotes-l"
+                                        class="quote-icon text-primary"></iconify-icon>
+                                </div>
+                                <div class="col-md-10 mt-md-5 p-5 pt-0 pt-md-5">
+                                    <p class="testimonial-content fs-2">The dried apricots are incredibly sweet and
+                                        fresh. I can’t believe they’re not full of added sugar — just pure goodness!</p>
+                                    <p class="text-black">– Anna Petrova</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-2">
+                                    <iconify-icon icon="ri:double-quotes-l"
+                                        class="quote-icon text-primary"></iconify-icon>
+                                </div>
+                                <div class="col-md-10 mt-md-5 p-5 pt-0 pt-md-5">
+                                    <p class="testimonial-content fs-2">Finally found a place with real, sun-dried figs
+                                        and no preservatives. Delicious and healthy snack for my kids!</p>
+                                    <p class="text-black">– Dmitry Sokolov</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-2">
+                                    <iconify-icon icon="ri:double-quotes-l"
+                                        class="quote-icon text-primary"></iconify-icon>
+                                </div>
+                                <div class="col-md-10 mt-md-5 p-5 pt-0 pt-md-5">
+                                    <p class="testimonial-content fs-2">I ordered dried mango and dates — they arrived
+                                        fast and taste amazing. Will definitely be ordering again.</p>
+                                    <p class="text-black">– Elena Markina</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  -->
+<section id="bestselling" class="my-5 overflow-hidden">
+    <div class="container py-5 mb-5">
+
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Best Selling Dried Fruits</h2>
+            <div>
+                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                    shop now
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="swiper bestselling-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="card position-relative">
+                        <a href="single-product.html"><img src="images/dried-apricots.jpg" class="img-fluid rounded-4"
+                                alt="Dried Apricots"></a>
+                        <div class="card-body p-0">
+                            <a href="single-product.html">
+                                <h3 class="card-title pt-4 m-0">Natural Dried Apricots</h3>
+                            </a>
+                            <div class="card-text">
+                                <span class="rating secondary-font">
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    5.0</span>
+                                <h3 class="secondary-font text-primary">$6.90 / 500g</h3>
+                                <div class="d-flex flex-wrap mt-3">
+                                    <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                        <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                    </a>
+                                    <a href="#" class="btn-wishlist px-4 pt-3">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card position-relative">
+                        <a href="single-product.html"><img src="images/dried-figs.jpg" class="img-fluid rounded-4"
+                                alt="Dried Figs"></a>
+                        <div class="card-body p-0">
+                            <a href="single-product.html">
+                                <h3 class="card-title pt-4 m-0">Premium Dried Figs</h3>
+                            </a>
+                            <div class="card-text">
+                                <span class="rating secondary-font">
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    5.0</span>
+                                <h3 class="secondary-font text-primary">$5.80 / 400g</h3>
+                                <div class="d-flex flex-wrap mt-3">
+                                    <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                        <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                    </a>
+                                    <a href="#" class="btn-wishlist px-4 pt-3">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="z-1 position-absolute rounded-3 m-3 px-3 border border-dark-subtle">
+                        -10%
+                    </div>
+                    <div class="card position-relative">
+                        <a href="single-product.html"><img src="images/dates.jpg" class="img-fluid rounded-4"
+                                alt="Pitted Dates"></a>
+                        <div class="card-body p-0">
+                            <a href="single-product.html">
+                                <h3 class="card-title pt-4 m-0">Pitted Dates</h3>
+                            </a>
+                            <div class="card-text">
+                                <span class="rating secondary-font">
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    5.0</span>
+                                <h3 class="secondary-font text-primary"><s>$5.00</s> $4.50 / 500g</h3>
+                                <div class="d-flex flex-wrap mt-3">
+                                    <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                        <h5 class="text-uppercase m-0">Add to Cart</h5>
+                                    </a>
+                                    <a href="#" class="btn-wishlist px-4 pt-3">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- You can add more products similarly -->
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--  -->
+<section id="register" style="background: url('images/background-img.png') no-repeat;">
+    <div class="container">
+        <div class="row my-5 py-5">
+            <div class="offset-md-3 col-md-6 my-5">
+                <h2 class="display-3 fw-normal text-center">
+                    Get <span class="text-primary">20% OFF</span> Your First Order
+                </h2>
+                <p class="text-center mb-4">Join our dried fruits family and enjoy exclusive deals and healthy tips!</p>
+                <form>
+                    <div class="mb-3">
+                        <input type="email" class="form-control form-control-lg" name="email" id="email"
+                            placeholder="Enter your email address" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control form-control-lg" name="password" id="password1"
+                            placeholder="Create a password" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control form-control-lg" name="confirm_password"
+                            id="password2" placeholder="Repeat password" required>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-dark btn-lg rounded-1 text-uppercase">Join Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  -->
+<section id="latest-blog" class="my-5">
+    <div class="container py-5 my-5">
+        <div class="row mt-5">
+            <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+                <h2 class="display-3 fw-normal">Latest from Our Blog</h2>
+                <div>
+                    <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                        Read all
+                        <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Blog Post 1 -->
+            <div class="col-md-4 my-4 my-md-0">
+                <div class="z-1 position-absolute rounded-3 m-2 px-3 pt-1 bg-light">
+                    <h3 class="secondary-font text-primary m-0">20</h3>
+                    <p class="secondary-font fs-6 m-0">Feb</p>
+                </div>
+                <div class="card position-relative">
+                    <a href="single-post.html"><img src="images/blog1.jpg" class="img-fluid rounded-4"
+                            alt="Healthy Snacks"></a>
+                    <div class="card-body p-0">
+                        <a href="single-post.html">
+                            <h3 class="card-title pt-4 pb-3 m-0">Top 10 Dried Fruits to Boost Your Energy Naturally</h3>
+                        </a>
+                        <div class="card-text">
+                            <p class="blog-paragraph fs-6">
+                                Discover how dried fruits like dates, figs, and apricots can give you a natural energy
+                                kick—perfect for your daily routine.
+                            </p>
+                            <a href="single-post.html" class="blog-read">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="col-md-4 my-4 my-md-0">
+                <div class="z-1 position-absolute rounded-3 m-2 px-3 pt-1 bg-light">
+                    <h3 class="secondary-font text-primary m-0">21</h3>
+                    <p class="secondary-font fs-6 m-0">Feb</p>
+                </div>
+                <div class="card position-relative">
+                    <a href="single-post.html"><img src="images/blog2.jpg" class="img-fluid rounded-4"
+                            alt="Snack Ideas"></a>
+                    <div class="card-body p-0">
+                        <a href="single-post.html">
+                            <h3 class="card-title pt-4 pb-3 m-0">Healthy Snack Ideas Using Dried Fruits</h3>
+                        </a>
+                        <div class="card-text">
+                            <p class="blog-paragraph fs-6">
+                                From trail mix to smoothie bowls, we share quick and delicious snack ideas that make
+                                healthy eating easy and fun.
+                            </p>
+                            <a href="single-post.html" class="blog-read">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="col-md-4 my-4 my-md-0">
+                <div class="z-1 position-absolute rounded-3 m-2 px-3 pt-1 bg-light">
+                    <h3 class="secondary-font text-primary m-0">22</h3>
+                    <p class="secondary-font fs-6 m-0">Feb</p>
+                </div>
+                <div class="card position-relative">
+                    <a href="single-post.html"><img src="images/blog3.jpg" class="img-fluid rounded-4"
+                            alt="Nutrition Tips"></a>
+                    <div class="card-body p-0">
+                        <a href="single-post.html">
+                            <h3 class="card-title pt-4 pb-3 m-0">Why Dried Fruits Are a Must in Your Daily Diet</h3>
+                        </a>
+                        <div class="card-text">
+                            <p class="blog-paragraph fs-6">
+                                Learn about the vitamins, fiber, and antioxidants in dried fruits and why they should be
+                                part of your everyday meals.
+                            </p>
+                            <a href="single-post.html" class="blog-read">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="service">
+    <div class="container py-5 my-5">
+        <div class="row g-md-5 pt-4">
+            <div class="col-md-3 my-3">
+                <div class="card">
+                    <div>
+                        <iconify-icon class="service-icon text-primary" icon="la:shopping-cart"></iconify-icon>
+                    </div>
+                    <h3 class="card-title py-2 m-0">Free Delivery</h3>
+                    <div class="card-text">
+                        <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 my-3">
+                <div class="card">
+                    <div>
+                        <iconify-icon class="service-icon text-primary" icon="la:user-check"></iconify-icon>
+                    </div>
+                    <h3 class="card-title py-2 m-0">100% secure payment</h3>
+                    <div class="card-text">
+                        <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 my-3">
+                <div class="card">
+                    <div>
+                        <iconify-icon class="service-icon text-primary" icon="la:tag"></iconify-icon>
+                    </div>
+                    <h3 class="card-title py-2 m-0">Daily Offer</h3>
+                    <div class="card-text">
+                        <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 my-3">
+                <div class="card">
+                    <div>
+                        <iconify-icon class="service-icon text-primary" icon="la:award"></iconify-icon>
+                    </div>
+                    <h3 class="card-title py-2 m-0">Quality guarantee</h3>
+                    <div class="card-text">
+                        <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 {% endblock %}

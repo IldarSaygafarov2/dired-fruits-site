@@ -1,21 +1,46 @@
+<!DOCTYPE html>
 {% load static %}
 
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        {% block title %}
-        {% endblock %}
-    </title>
-    
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 </head>
+
+
+{% include 'components/_styles.html' %}
+
+</head>
+
 <body>
-    
-    
-    <script src='{% static "js/script.js" %}'></script>
+
+    <!-- preloader -->
+    {% include 'components/_preloader.html' %}
+
+    <!-- header -->
+    {% include 'components/_header.html' %}
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    <!-- footer -->
+    {% include 'components/_footer.html' %}
+
+
+    <!-- JS -->
+    {% include 'components/_scripts.html' %}
 </body>
+
 </html>
