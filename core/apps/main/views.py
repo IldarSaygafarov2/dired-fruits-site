@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from core.apps.main.models import Category
+from core.apps.main.models import Category, Product
 
 
 def render_home_page(request):
@@ -8,7 +8,11 @@ def render_home_page(request):
 
 def render_category_page(request, category_id):
     category = Category.objects.filter(id=category_id).first()
+    products = Product.objects.filter(category=category)
+
     context = {
         "category": category,
+        "category_id": category_id,
+        "products": products,
     }
     return render(request, "main/category_page.html", context)
