@@ -69,6 +69,14 @@ class Product(BaseModel):
         verbose_name = "Товар"
         verbose_name_plural = "Товары"
 
+    def get_absolute_url(self):
+        return reverse("product-detail", kwargs={"product_id": self.pk})
+
+    def get_image(self):
+        if self.image:
+            return self.image.url
+        return "https://static.wixstatic.com/media/d8d60b_6ff8d8667db1462492d681839d85054c~mv2.png/v1/fill/w_900,h_900,al_c,q_90/file.jpg"
+
     def __str__(self):
         return self.name
 
