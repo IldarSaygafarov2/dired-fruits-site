@@ -27,6 +27,12 @@ class Category(BaseModel):
         return self.name
 
 
+class ProductStatusChoices(models.TextChoices):
+    NEW = "NEW", 'new'
+    SOLD = "SOLD", 'sold'
+    SALE = "SALE", 'sale'
+
+
 class Product(BaseModel):
     name = models.CharField(verbose_name="Название товара", max_length=200)
     grade = models.IntegerField(default=0)
@@ -65,6 +71,9 @@ class Product(BaseModel):
         verbose_name="Условия хранения", blank=True, null=True
     )
 
+    status = models.CharField(verbose_name='Статус продукта', choices=ProductStatusChoices.choices,
+                              default=ProductStatusChoices.NEW, max_length=50)
+
     class Meta(BaseModel.Meta):
         verbose_name = "Товар"
         verbose_name_plural = "Товары"
@@ -79,7 +88,6 @@ class Product(BaseModel):
 
     def __str__(self):
         return self.name
-
 
 # class Banner(BaseModel):
 #     title = models.CharField(verbose_name="Заголовок баннера", max_length=200)

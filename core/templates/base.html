@@ -1,11 +1,12 @@
-<!DOCTYPE html>
 {% load static %}
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>
-        {% block title %}{% endblock %}
+        {% block title %}
+        {% endblock %}
     </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,32 +16,43 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <meta name="description" content="">
-</head>
 
 
-{% include 'components/_styles.html' %}
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat:wght@300;400;500&display=swap"
+          rel="stylesheet">
 
 </head>
 
 <body>
+{% include 'components/_preloader.html' %}
 
-    <!-- preloader -->
-    {% include 'components/_preloader.html' %}
-
-    <!-- header -->
+<header>
     {% include 'components/_header.html' %}
+</header>
+
+{% block content %}
+{% endblock %}
 
 
-    {% block content %}
-    {% endblock %}
-
-
-    <!-- footer -->
+<footer id="footer">
     {% include 'components/_footer.html' %}
+</footer>
 
 
-    <!-- JS -->
-    {% include 'components/_scripts.html' %}
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<script src="{% static 'js/swiper.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/iconify.js' %}"></script>
 </body>
 
 </html>

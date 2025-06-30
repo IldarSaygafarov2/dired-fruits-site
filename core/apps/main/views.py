@@ -3,7 +3,11 @@ from core.apps.main.models import Category, Product
 
 
 def render_home_page(request):
-    return render(request, "main/index.html")
+    products = Product.objects.all()
+    context = {
+        'products': products
+    }
+    return render(request, "main/index.html", context)
 
 
 def render_shop_page(request):

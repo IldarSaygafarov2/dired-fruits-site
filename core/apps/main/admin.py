@@ -21,7 +21,8 @@ class ProductAdmin(admin.ModelAdmin):
         "importer",
         "net_weight",
         "gross_weight",
+        "status"
     )
     list_display_links = ("name",)
     search_fields = ("name", "category__name", "manufacturer", "importer")
-    list_filter = ("category", "created_at", "updated_at")
+    list_filter = ("category", "status", "created_at")
