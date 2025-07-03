@@ -53,36 +53,36 @@
     <nav class="main-menu d-flex navbar navbar-expand-lg">
 
         <!-- Icons (mobile only) -->
-        <div class="d-flex d-lg-none align-items-end mt-3">
-            <ul class="d-flex justify-content-end list-unstyled m-0">
-                <li>
-                    <a href="account.html" class="mx-3 text-success-emphasis" style="color: #379042;">
-                        <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="wishlist.html" class="mx-3" style="color: #379042;">
-                        <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="mx-3 position-relative" data-bs-toggle="offcanvas"
-                       data-bs-target="#offcanvasCart" aria-controls="offcanvasCart" style="color: #379042;">
-                        <iconify-icon icon="mdi:cart" class="fs-4"></iconify-icon>
-                        <span class="position-absolute translate-middle badge rounded-circle bg-success pt-2"
-                              style="background-color: #379042;">
-                          03
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
-                       aria-controls="offcanvasSearch" style="color: #379042;">
-                        <iconify-icon icon="tabler:search" class="fs-4"></iconify-icon>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        {#        <div class="d-flex d-lg-none align-items-end mt-3">#}
+        {#            <ul class="d-flex justify-content-end list-unstyled m-0">#}
+        {#                <li>#}
+        {#                    <a href="account.html" class="mx-3 text-success-emphasis" style="color: #379042;">#}
+        {#                        <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                <li>#}
+        {#                    <a href="wishlist.html" class="mx-3" style="color: #379042;">#}
+        {#                        <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                <li>#}
+        {#                    <a href="#" class="mx-3 position-relative" data-bs-toggle="offcanvas"#}
+        {#                       data-bs-target="#offcanvasCart" aria-controls="offcanvasCart" style="color: #379042;">#}
+        {#                        <iconify-icon icon="mdi:cart" class="fs-4"></iconify-icon>#}
+        {#                        <span class="position-absolute translate-middle badge rounded-circle bg-success pt-2"#}
+        {#                              style="background-color: #379042;">#}
+        {#                          03#}
+        {#                        </span>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                <li>#}
+        {#                    <a href="#" class="mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"#}
+        {#                       aria-controls="offcanvasSearch" style="color: #379042;">#}
+        {#                        <iconify-icon icon="tabler:search" class="fs-4"></iconify-icon>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#            </ul>#}
+        {#        </div>#}
 
         <!-- Toggler -->
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
@@ -100,17 +100,29 @@
             <div class="offcanvas-body justify-content-between">
                 <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
                     <li class="nav-item">
-                        <a href="{% url 'home-page' %}" class="nav-link fw-semibold text-success"
+                        <a
+                                href="{% url 'home-page' %}"
+                                class="nav-link fw-semibold {% if request.path == '/' %}text-dark{% endif %}"
                            style="color: #379042;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'shop-page' %}" class="nav-link fw-semibold" style="color: #379042;">Shop</a>
+                        <a href="{% url 'shop-page' %}"
+                           class="nav-link fw-semibold {% if request.path == '/shop/' %}text-dark{% endif %}"
+                           style="color: #379042;">
+                            Shop
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link fw-semibold" style="color: #379042;">About Us</a>
+                        <a href="{% url 'about-page' %}"
+                           class="nav-link fw-semibold {% if request.path == '/about/' %}text-dark{% endif %}"
+                           style="color: #379042;">
+                            About Us
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link fw-semibold" style="color: #379042;">Contact</a>
+                        <a href="{% url 'contacts-page' %}"
+                           class="nav-link fw-semibold {% if request.path == '/contacts/' %}text-dark{% endif %}"
+                           style="color: #379042;">Contact</a>
                     </li>
                 </ul>
             </div>
